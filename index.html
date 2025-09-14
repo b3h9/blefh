@@ -38,6 +38,31 @@
             opacity: 1;
         }
 
+        /* Style for the contact page background */
+        #contact {
+            background-image: url('https://cdna.artstation.com/p/assets/images/images/054/753/166/original/daniel-felipe-pinilla-camacho-gatite-2.gif?1665299008');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+        
+        #contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 10;
+        }
+
+        #contact .content-container {
+            position: relative;
+            z-index: 20;
+        }
+
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -83,22 +108,22 @@
                 </div>
             </section>
 
-            <section id="contact" class="page-section hidden max-w-2xl mx-auto">
-                <h2 class="text-4xl font-bold mb-8">Get Featured</h2>
-                <div class="space-y-6 text-lg p-8 rounded-lg bg-gray-900 dark:bg-zinc-900 theme-transition">
-                    <p class="text-center leading-relaxed">
-                        if you wanna be on this site my discord is blefh
-                        <br>
-                        fee is 2 dollars every month sorry if its expensive i really need money ):
-                        <br><br>
-                        oh also go support those artist's
-                    </p>
+            <section id="contact" class="page-section hidden flex items-center justify-center min-h-screen">
+                <div class="content-container max-w-2xl mx-auto p-8 rounded-lg bg-gray-900/80 dark:bg-zinc-900/80 theme-transition text-white">
+                    <h2 class="text-4xl font-bold mb-8 text-center">Get Featured</h2>
+                    <div class="space-y-6 text-lg">
+                        <p class="text-center leading-relaxed">
+                            if you wanna be on this site my discord is blefh
+                            <br>
+                            fee is 2 dollars every month sorry if its expensive i really need money ):
+                            <br><br>
+                            oh also go support those artist's
+                        </p>
+                    </div>
                 </div>
             </section>
         </main>
     </div>
-
-    <!-- New secret page section, hidden by default -->
     <section id="secret" class="hidden fixed inset-0 bg-black text-red-600 flex items-center justify-center text-center">
         <h1 class="text-5xl md:text-7xl font-bold">you aren't meant to be here......</h1>
     </section>
