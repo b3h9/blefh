@@ -9,6 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             transition: background-color 0.3s ease, color 0.3s ease;
@@ -38,12 +43,10 @@
             opacity: 1;
         }
 
-        /* Style for the contact page background */
         #contact {
             background-image: url('https://cdna.artstation.com/p/assets/images/images/054/753/166/original/daniel-felipe-pinilla-camacho-gatite-2.gif?1665299008');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
             position: relative;
         }
         
@@ -62,23 +65,6 @@
             position: relative;
             z-index: 20;
         }
-
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        .dark ::-webkit-scrollbar-track {
-            background: #1a1a1a;
-        }
-        html:not(.dark) ::-webkit-scrollbar-track {
-             background: #f1f1f1;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #555;
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #888;
-        }
     </style>
 </head>
 <body class="bg-black text-white theme-transition">
@@ -92,7 +78,7 @@
         </svg>
     </button>
 
-    <div class="flex min-h-screen" id="main-content">
+    <div class="flex h-screen" id="main-content">
         <aside class="w-64 bg-gray-900 dark:bg-black p-6 flex-shrink-0 flex flex-col theme-transition border-r border-gray-700">
             <h1 class="text-3xl font-bold text-white dark:text-white mb-12">Blefh</h1>
             <nav class="flex flex-col space-y-4">
@@ -101,14 +87,14 @@
             </nav>
         </aside>
 
-        <main class="flex-1 p-6 sm:p-10">
-            <section id="home" class="page-section">
+        <main class="flex-1">
+            <section id="home" class="page-section p-6 sm:p-10 h-full overflow-y-auto">
                 <h2 class="text-4xl font-bold mb-8">Artist's</h2>
                 <div id="artist-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                 </div>
             </section>
 
-            <section id="contact" class="page-section hidden flex items-center justify-center min-h-screen">
+            <section id="contact" class="page-section hidden flex items-center justify-center h-full p-6 sm:p-10">
                 <div class="content-container max-w-2xl mx-auto p-8 rounded-lg bg-gray-900/80 dark:bg-zinc-900/80 theme-transition text-white">
                     <h2 class="text-4xl font-bold mb-8 text-center">Get Featured</h2>
                     <div class="space-y-6 text-lg">
@@ -124,6 +110,7 @@
             </section>
         </main>
     </div>
+
     <section id="secret" class="hidden fixed inset-0 bg-black text-red-600 flex items-center justify-center text-center">
         <h1 class="text-5xl md:text-7xl font-bold">you aren't meant to be here......</h1>
     </section>
